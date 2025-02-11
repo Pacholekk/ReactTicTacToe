@@ -17,6 +17,7 @@ function App() {
         { square: { row: rowIndex, col: colIndex }, player: curPlayer },
         ...prevTurns,
       ];
+      console.log(updatedTurns);
       return updatedTurns;
     });
   }
@@ -37,7 +38,7 @@ function App() {
         </ol>
         <GameBoard onSelectSquare={handleSelectSquare} turns={gameTurns} />
       </div>
-      <Log />
+      <Log turns={gameTurns} />
     </main>
   );
 }
